@@ -2,7 +2,7 @@
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Binary(30));
+        Console.WriteLine(Binary(15));
     }
 
     static int Binary(int num)
@@ -11,8 +11,11 @@
 
         while (num >= 1)
         {
-            num /= 2;
-            count++;
+            if (num % 2 == 1)
+            {
+                count++;
+            }
+            num /= 2;                        
         }
         return count;
     }
